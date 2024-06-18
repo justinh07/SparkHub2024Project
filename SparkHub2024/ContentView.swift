@@ -8,15 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var bgcolor: Color = .blue
     var body: some View {
-        VStack {
-            Text("SparkHub 2024 Hackathon")
-                .font(.system(size: 100))
+        ZStack {
+            bgcolor.edgesIgnoringSafeArea(.all)
+            VStack {
+                Text("SparkHub 2024 Hackathon")
+                    .font(.system(size: 100))
+            }
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
 }
+
+
