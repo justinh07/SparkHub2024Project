@@ -17,6 +17,9 @@ struct ContentView: View {
                     .font(.system(size: 100))
             }
         }
+        
+        Text("Initial Commit test")
+            .font(.system(size:50))
     }
 }
 
