@@ -14,6 +14,7 @@
 		B28EE3A52C223A2C00BB6D79 /* SparkHub2024Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EE3A42C223A2C00BB6D79 /* SparkHub2024Tests.swift */; };
 		B28EE3AF2C223A2C00BB6D79 /* SparkHub2024UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EE3AE2C223A2C00BB6D79 /* SparkHub2024UITests.swift */; };
 		B28EE3B12C223A2C00BB6D79 /* SparkHub2024UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EE3B02C223A2C00BB6D79 /* SparkHub2024UITestsLaunchTests.swift */; };
+		B28EE3BE2C24D37C00BB6D79 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EE3BD2C24D37C00BB6D79 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		B28EE3AA2C223A2C00BB6D79 /* SparkHub2024UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SparkHub2024UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28EE3AE2C223A2C00BB6D79 /* SparkHub2024UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkHub2024UITests.swift; sourceTree = "<group>"; };
 		B28EE3B02C223A2C00BB6D79 /* SparkHub2024UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkHub2024UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B28EE3BD2C24D37C00BB6D79 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				B28EE3922C223A2A00BB6D79 /* SparkHub2024App.swift */,
 				B28EE3942C223A2A00BB6D79 /* ContentView.swift */,
+				B28EE3BD2C24D37C00BB6D79 /* MapView.swift */,
 				B28EE3962C223A2B00BB6D79 /* Assets.xcassets */,
 				B28EE3982C223A2B00BB6D79 /* SparkHub2024.entitlements */,
 				B28EE3992C223A2B00BB6D79 /* Preview Content */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B28EE3952C223A2A00BB6D79 /* ContentView.swift in Sources */,
+				B28EE3BE2C24D37C00BB6D79 /* MapView.swift in Sources */,
 				B28EE3932C223A2A00BB6D79 /* SparkHub2024App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
