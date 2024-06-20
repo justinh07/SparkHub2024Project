@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ContentView: View {
     @State private var bgcolor: Color = .blue
@@ -14,12 +15,14 @@ struct ContentView: View {
             bgcolor.edgesIgnoringSafeArea(.all)
             VStack {
                 Text("SparkHub 2024 Hackathon")
-                    .font(.system(size: 100))
+                    .font(.system(size: 30))
             }
+            
         }
-        
-        Text("Initial Commit test")
-            .font(.system(size:50))
+        .offset(CGSize(width: 0, height: -250))
+        Map(coordinateRegion: .constant(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))), interactionModes: [])
+            .frame(width: 400, height: 300)
+            
     }
 }
 
