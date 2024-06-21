@@ -27,7 +27,7 @@ struct MapView: View {
                         Text("Join an Existing Event")
                     }
                 } label: {
-                    Image(systemName: "cross.circle")
+                    Image(systemName: "ellipsis.circle")
                         .resizable()
                         .frame(width: 100, height: 100)
                         .foregroundColor(.black)
