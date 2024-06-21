@@ -15,6 +15,7 @@ import MapKit
 struct MapView: View {
     
     private var buttonsize: CGFloat = 50
+    private var buttoncolor: Color = .white
     
     var body: some View {
          
@@ -25,10 +26,15 @@ struct MapView: View {
                 ZStack {
                     Map {}
                     
+                    Rectangle()
+                        .opacity(0.7)
+                        .offset(y:775)
+                    
                     HStack{
                         Image(systemName: "person.crop.circle")
                             .resizable()
                             .frame(width: buttonsize,height: buttonsize)
+                            .foregroundColor(buttoncolor)
                         
                         Menu {
                             NavigationLink(destination: CreateView()) {
@@ -41,13 +47,14 @@ struct MapView: View {
                             Image(systemName: "cross.circle")
                                 .resizable()
                                 .frame(width: buttonsize,height: buttonsize)
-                                .foregroundColor(.black)
+                                .foregroundColor(buttoncolor)
                         }
                         .padding(80)
 
                         Image(systemName: "magnifyingglass")
                             .resizable()
                             .frame(width: buttonsize, height: buttonsize)
+                            .foregroundColor(buttoncolor)
 
                     }
                     
