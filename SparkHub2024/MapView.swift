@@ -32,15 +32,10 @@ struct MapView: View {
                                     .frame(width: buttonsize,height: buttonsize)
                                     .foregroundColor(buttoncolor)
                                     .offset(y: -3)
-                            }
-
-                        
+                            }                        
                         Menu {
                             NavigationLink(destination: CreateView()) {
                                 Text("Add a New Event")
-                            }
-                            NavigationLink(destination: JoinView()) {
-                                Text("Join an Existing Event")
                             }
                         } label: {
                             Image(systemName: "cross.circle")
