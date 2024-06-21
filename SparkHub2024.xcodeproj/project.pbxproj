@@ -15,6 +15,8 @@
 		B28EE3AF2C223A2C00BB6D79 /* SparkHub2024UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EE3AE2C223A2C00BB6D79 /* SparkHub2024UITests.swift */; };
 		B28EE3B12C223A2C00BB6D79 /* SparkHub2024UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EE3B02C223A2C00BB6D79 /* SparkHub2024UITestsLaunchTests.swift */; };
 		B28EE3BE2C24D37C00BB6D79 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EE3BD2C24D37C00BB6D79 /* MapView.swift */; };
+		B28EE3F72C24F0FB00BB6D79 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EE3F62C24F0FB00BB6D79 /* CreateView.swift */; };
+		B28EE3F92C25012600BB6D79 /* JoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EE3F82C25012600BB6D79 /* JoinView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		B28EE3AE2C223A2C00BB6D79 /* SparkHub2024UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkHub2024UITests.swift; sourceTree = "<group>"; };
 		B28EE3B02C223A2C00BB6D79 /* SparkHub2024UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkHub2024UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B28EE3BD2C24D37C00BB6D79 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		B28EE3F62C24F0FB00BB6D79 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		B28EE3F82C25012600BB6D79 /* JoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				B28EE3922C223A2A00BB6D79 /* SparkHub2024App.swift */,
 				B28EE3942C223A2A00BB6D79 /* ContentView.swift */,
 				B28EE3BD2C24D37C00BB6D79 /* MapView.swift */,
+				B28EE3F62C24F0FB00BB6D79 /* CreateView.swift */,
+				B28EE3F82C25012600BB6D79 /* JoinView.swift */,
 				B28EE3962C223A2B00BB6D79 /* Assets.xcassets */,
 				B28EE3982C223A2B00BB6D79 /* SparkHub2024.entitlements */,
 				B28EE3992C223A2B00BB6D79 /* Preview Content */,
@@ -264,6 +270,8 @@
 			files = (
 				B28EE3952C223A2A00BB6D79 /* ContentView.swift in Sources */,
 				B28EE3BE2C24D37C00BB6D79 /* MapView.swift in Sources */,
+				B28EE3F72C24F0FB00BB6D79 /* CreateView.swift in Sources */,
+				B28EE3F92C25012600BB6D79 /* JoinView.swift in Sources */,
 				B28EE3932C223A2A00BB6D79 /* SparkHub2024App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,30 +14,31 @@ import MapKit
 
 struct MapView: View {
     var body: some View {
-        ZStack{
-            Map()
-            
-            Menu {
-                Button(action: {
-                    print("Hi")
-                }) {
-                    Text("Join an Event")
+        NavigationStack {
+            ZStack {
+                Map {
+                    
                 }
-                Button(action: {
-                    print("Hi")
-                }) {
-                    Text("Add a New Event")
+                Menu {
+                    NavigationLink(destination: CreateView()) {
+                        Text("Add a New Event")
+                    }
+                    NavigationLink(destination: JoinView()) {
+                        Text("Join an Existing Event")
+                    }
+                } label: {
+                    Image(systemName: "cross.circle")
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                        .foregroundColor(.black)
                 }
-            } label: {
-                Image(systemName: "cross.circle")
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                    .foregroundColor(.black)
+                .offset(y: 300)
             }
-            .offset(y: 300)
         }
     }
 }
+
+
 
 #Preview {
     MapView()
