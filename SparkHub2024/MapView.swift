@@ -13,27 +13,48 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
+    
+    private var buttonsize: CGFloat = 50
+    
     var body: some View {
-        NavigationStack {
-            ZStack {
-                Map {
+         
+        
+        
+        
+            NavigationStack {
+                ZStack {
+                    Map {}
+                    
+                    HStack{
+                        Image(systemName: "person.crop.circle")
+                            .resizable()
+                            .frame(width: buttonsize,height: buttonsize)
+                        
+                        Menu {
+                            NavigationLink(destination: CreateView()) {
+                                Text("Add a New Event")
+                            }
+                            NavigationLink(destination: JoinView()) {
+                                Text("Join an Existing Event")
+                            }
+                        } label: {
+                            Image(systemName: "cross.circle")
+                                .resizable()
+                                .frame(width: buttonsize,height: buttonsize)
+                                .foregroundColor(.black)
+                        }
+                        .padding(80)
+
+                        Image(systemName: "magnifyingglass")
+                            .resizable()
+                            .frame(width: buttonsize, height: buttonsize)
+
+                    }
+                    
+                    .offset(y: 400)
                     
                 }
-                Menu {
-                    NavigationLink(destination: CreateView()) {
-                        Text("Add a New Event")
-                    }
-                    NavigationLink(destination: JoinView()) {
-                        Text("Join an Existing Event")
-                    }
-                } label: {
-                    Image(systemName: "cross.circle")
-                        .resizable()
-                        .frame(width: 100, height: 100)
-                        .foregroundColor(.black)
-                }
-                .offset(y: 300)
-            }
+
         }
     }
 }
