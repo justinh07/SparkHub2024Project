@@ -8,19 +8,12 @@
 import SwiftUI
 import MapKit
 
-
-import SwiftUI
-import MapKit
-
 struct MapView: View {
     
     private var buttonsize: CGFloat = 50
     private var buttoncolor: Color = .white
     
     var body: some View {
-         
-        
-        
         
             NavigationStack {
                 ZStack {
@@ -31,10 +24,16 @@ struct MapView: View {
                         .offset(y:775)
                     
                     HStack{
-                        Image(systemName: "person.crop.circle")
-                            .resizable()
-                            .frame(width: buttonsize,height: buttonsize)
-                            .foregroundColor(buttoncolor)
+                        NavigationLink {
+                                ProfileView()
+                            } label: {
+                                Image(systemName: "person.crop.circle")
+                                    .resizable()
+                                    .frame(width: buttonsize,height: buttonsize)
+                                    .foregroundColor(buttoncolor)
+                                    .offset(y: -3)
+                            }
+
                         
                         Menu {
                             NavigationLink(destination: CreateView()) {
@@ -49,13 +48,16 @@ struct MapView: View {
                                 .frame(width: buttonsize,height: buttonsize)
                                 .foregroundColor(buttoncolor)
                         }
+                        .offset(y:15)
                         .padding(80)
-
-                        Image(systemName: "magnifyingglass")
-                            .resizable()
-                            .frame(width: buttonsize, height: buttonsize)
-                            .foregroundColor(buttoncolor)
-
+                            NavigationLink {
+                                    SearchView()
+                                } label: {
+                                    Image(systemName: "magnifyingglass")
+                                        .resizable()
+                                        .frame(width: buttonsize, height: buttonsize)
+                                        .foregroundColor(buttoncolor)
+                                }
                     }
                     
                     .offset(y: 400)
