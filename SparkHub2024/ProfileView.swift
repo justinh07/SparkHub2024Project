@@ -33,9 +33,9 @@ struct ProfileView: View {
                 .offset(y:50)
                 Menu {
                     Button("Cancel") {}
-                    NavigationLink(destination: LoginView()) {
-                        Text("Confirm Log Out")
-                        .navigationBarBackButtonHidden(true)
+                    NavigationLink("Confirm Log Out") {
+                        LoginView()
+                            .navigationBarBackButtonHidden(true)
                     }
                 } label: {
                     Text("Log Out")
