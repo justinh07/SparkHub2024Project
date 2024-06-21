@@ -19,6 +19,7 @@
 		B28EE3BE2C24D37C00BB6D79 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EE3BD2C24D37C00BB6D79 /* MapView.swift */; };
 		B28EE3F72C24F0FB00BB6D79 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EE3F62C24F0FB00BB6D79 /* CreateView.swift */; };
 		B28EE3F92C25012600BB6D79 /* JoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EE3F82C25012600BB6D79 /* JoinView.swift */; };
+		B28EE3FB2C26295E00BB6D79 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EE3FA2C26295E00BB6D79 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		B28EE3BD2C24D37C00BB6D79 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		B28EE3F62C24F0FB00BB6D79 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		B28EE3F82C25012600BB6D79 /* JoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinView.swift; sourceTree = "<group>"; };
+		B28EE3FA2C26295E00BB6D79 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				B28EE3F82C25012600BB6D79 /* JoinView.swift */,
 				5546D25C2C2514B50060E95D /* SearchView.swift */,
 				5546D25E2C2515080060E95D /* ProfileView.swift */,
+				B28EE3FA2C26295E00BB6D79 /* LoginView.swift */,
 				B28EE3962C223A2B00BB6D79 /* Assets.xcassets */,
 				B28EE3982C223A2B00BB6D79 /* SparkHub2024.entitlements */,
 				B28EE3992C223A2B00BB6D79 /* Preview Content */,
@@ -280,6 +283,7 @@
 				B28EE3F92C25012600BB6D79 /* JoinView.swift in Sources */,
 				5546D25D2C2514B50060E95D /* SearchView.swift in Sources */,
 				5546D25F2C2515080060E95D /* ProfileView.swift in Sources */,
+				B28EE3FB2C26295E00BB6D79 /* LoginView.swift in Sources */,
 				B28EE3932C223A2A00BB6D79 /* SparkHub2024App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
