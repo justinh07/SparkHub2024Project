@@ -50,19 +50,17 @@ struct MapView: View {
                         }
                         .offset(y:15)
                         .padding(80)
-                            NavigationLink {
-                                    SearchView()
-                                } label: {
-                                    Image(systemName: "magnifyingglass")
-                                        .resizable()
-                                        .frame(width: buttonsize, height: buttonsize)
-                                        .foregroundColor(buttoncolor)
-                                }
-                    }
-                    
-                    .offset(y: 400)
-                    
+                        NavigationLink {
+                                SearchView()
+                        } label: {
+                            Image(systemName: "magnifyingglass")
+                                .resizable()
+                                .frame(width: buttonsize, height: buttonsize)
+                                .foregroundColor(buttoncolor)
+                        }
                 }
+                    .offset(y: 400)
+            }
 
         }
     }
