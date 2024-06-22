@@ -120,7 +120,6 @@ struct SignUpView: View {
                     Rectangle()
                         .frame(width: 80, height: 50)
                         .foregroundColor(.blue)
-                        .offset(y: 100)
                     Button(action: {
                         guard !SignupModel.usernameExists(username) else {
                             print("Username taken")
