@@ -8,6 +8,8 @@
 import SwiftUI
 
 @main
+
+
 struct SparkHub2024App: App {
     var body: some Scene {
         WindowGroup {
