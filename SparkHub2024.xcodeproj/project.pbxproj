@@ -23,6 +23,8 @@
 		B28EE3FB2C26295E00BB6D79 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EE3FA2C26295E00BB6D79 /* LoginView.swift */; };
 		B2E621A52C27411600F27DD6 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = B2E621A42C27411600F27DD6 /* KeychainAccess */; };
 		B2E621A72C27425B00F27DD6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E621A62C27425B00F27DD6 /* SignUpView.swift */; };
+		B2E621AD2C277E9000F27DD6 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E621AC2C277E9000F27DD6 /* StartView.swift */; };
+		B2E621AF2C27814700F27DD6 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E621AE2C27814700F27DD6 /* SignUpModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		B28EE3F82C25012600BB6D79 /* JoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinView.swift; sourceTree = "<group>"; };
 		B28EE3FA2C26295E00BB6D79 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B2E621A62C27425B00F27DD6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		B2E621AC2C277E9000F27DD6 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		B2E621AE2C27814700F27DD6 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 				5546D25E2C2515080060E95D /* ProfileView.swift */,
 				B28EE3FA2C26295E00BB6D79 /* LoginView.swift */,
 				B2E621A62C27425B00F27DD6 /* SignUpView.swift */,
+				B2E621AE2C27814700F27DD6 /* SignUpModel.swift */,
+				B2E621AC2C277E9000F27DD6 /* StartView.swift */,
 				551CD7262C276D7100A50A51 /* Event.swift */,
 				B28EE3962C223A2B00BB6D79 /* Assets.xcassets */,
 				B28EE3982C223A2B00BB6D79 /* SparkHub2024.entitlements */,
@@ -300,7 +306,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B28EE3952C223A2A00BB6D79 /* ContentView.swift in Sources */,
+				B2E621AD2C277E9000F27DD6 /* StartView.swift in Sources */,
 				551CD7252C2751DD00A50A51 /* SearchView.swift in Sources */,
+				B2E621AF2C27814700F27DD6 /* SignUpModel.swift in Sources */,
 				B28EE3BE2C24D37C00BB6D79 /* MapView.swift in Sources */,
 				B28EE3F72C24F0FB00BB6D79 /* CreateView.swift in Sources */,
 				551CD7272C276D7100A50A51 /* Event.swift in Sources */,

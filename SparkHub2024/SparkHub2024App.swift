@@ -9,11 +9,13 @@ import SwiftUI
 
 @main
 
-
 struct SparkHub2024App: App {
+    @State private var signUpModel = SignUpModel()
+    
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            StartView()
+                .environmentObject(signUpModel)
         }
     }
 }

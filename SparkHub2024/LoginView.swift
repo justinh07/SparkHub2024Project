@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var name: String = ""
+    @EnvironmentObject private var signUpModel: SignUpModel
+    @State private var username: String = ""
     @State private var password: String = ""
     @State private var hidePassword: Bool = true
     @State private var hidePassText: String = "Show Password"
-    @State private var accountFound: Bool = false
+    @State private var loginError: String?
+    @State private var loggedIn: Bool = false
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             VStack {
                 VStack {
                     Text("Username")
@@ -26,7 +28,7 @@ struct LoginView: View {
                             .stroke(Color.black, lineWidth: 2)
                             .frame(width: 400, height: 50)
                             .opacity(0.3)
-                        TextField("Type Here", text: $name)
+                        TextField("Type Here", text: $username)
                             .frame(width: 380, height: 100)
                             .autocorrectionDisabled(true)
                     }
@@ -51,36 +53,58 @@ struct LoginView: View {
                         }
                     }
                     Button(action: {
-                        hidePassword = (hidePassword == true) ? false : true
-                        hidePassText = (hidePassText == "Show Password") ? "Hide Password" : "Show Password"
+                        hidePassword.toggle()
+                        hidePassText = hidePassword ? "Show Password" : "Hide Password"
                     }) {
                         Text(hidePassText)
                     }
                     .offset(x: -140, y: -20)
                 }
                 ZStack {
-                    Rectangle()
-                        .frame(width: 80, height: 50)
-                        .foregroundColor(.blue)
-                    NavigationLink(destination: MapView().navigationBarBackButtonHidden(true)) {
-                        Text("Submit")
-                            .foregroundColor(.white)
+                    Button(action: {
+                        attemptLogin()
+                    }) {
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 80, height: 50)
+                                .foregroundColor(.blue)
+                            Text("Log In")
+                                .foregroundColor(.white)
+                        }
                     }
                 }
                 .offset(y: 100)
-
-                Text("Incorrect Username and/or Password")
+                
+                Text(loginError ?? "")
                     .foregroundColor(.red)
-                    .offset(y: 110)
                     .font(.system(size: 20))
-                    .opacity((accountFound) ? 0 : 1)
+                    .opacity(loginError != nil ? 1 : 0)
+                    .padding(.top, 10)
             }
-            .offset(y: -100)
+            .padding()
+            .fullScreenCover(isPresented: $loggedIn) {
+                MapView()
+                    .onDisappear {
+                        loggedIn = false
+                    }
+            }
+        }
+    }
+    
+    private func attemptLogin() {
+        if signUpModel.signIn(username: username, password: password) {
+            signUpModel.loggedInUsername = username
+            loggedIn = true
+            loginError = nil
+        } else {
+            loginError = "Incorrect username and/or password"
         }
     }
 }
 
-
 #Preview {
     LoginView()
+        .environmentObject(SignUpModel())
 }
+
+
