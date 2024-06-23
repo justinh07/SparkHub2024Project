@@ -132,7 +132,6 @@ struct CreateView: View {
                 if title.isEmpty || description.isEmpty || eventdate == Date() || capacity.isEmpty {
                     isShowingAlert = true
                 } else {
-                    createEvent()
                     isShowingSuccessAlert = true
                 }
             }
