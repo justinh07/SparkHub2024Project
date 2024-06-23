@@ -17,6 +17,7 @@ struct CreateView: View {
     @State private var description: String = ""
     @State private var eventdate: Date = Date()
     @State private var capacity: String = ""
+    @State private var place: String = ""
     
     @State private var isShowingAlert = false
     @State private var isShowingSuccessAlert = false
@@ -87,7 +88,7 @@ struct CreateView: View {
                         .offset(y: 3)
                         .font(.system(size:30))
                     
-                    TextField("", text: $title)
+                    TextField("", text: $location)
                         .padding()
                         .frame(width: 130)
                         .background(Color.white)
@@ -132,6 +133,7 @@ struct CreateView: View {
                 if title.isEmpty || description.isEmpty || eventdate == Date() || capacity.isEmpty {
                     isShowingAlert = true
                 } else {
+                    createEvent()
                     isShowingSuccessAlert = true
                 }
             }
@@ -156,46 +158,12 @@ struct CreateView: View {
         }
     }
     
-    func getCoordinates(for location: String) {
-        let urlEncodedLocation = location.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        let urlString = "https://nominatim.openstreetmap.org/search?q=\(urlEncodedLocation)&format=json&limit=1"
-        guard let url = URL(string: urlString) else {
-            coordinates = ("Invalid URL", "")
-            return
-        }
-
-        let request = URLRequest(url: url)
-
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else {
-                DispatchQueue.main.async {
-                    self.coordinates = ("Error fetching data", "")
-                }
-                return
-            }
-
-            do {
-                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]],
-                   let firstResult = json.first,
-                   let lat = firstResult["lat"] as? String,
-                   let lon = firstResult["lon"] as? String {
-                    DispatchQueue.main.async {
-                        self.coordinates = (lat, lon)
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        self.coordinates = ("No results found", "")
-                    }
-                }
-            } catch {
-                DispatchQueue.main.async {
-                    self.coordinates = ("Error parsing data", "")
-                }
-            }
-        }
-        task.resume()
+    private func createEvent() {
+        // Perform actual creation of event logic here
+        // For demonstration, this method is empty
     }
 }
+
 
 struct CreateView_Previews: PreviewProvider {
     static var previews: some View {
