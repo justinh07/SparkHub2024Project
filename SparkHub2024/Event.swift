@@ -12,8 +12,8 @@ struct Event: Codable, Identifiable{
     let eventdate: TimeInterval
     var capacity: Int
     let host: String
-    let latitude: Double // New property for latitude
-    let longitude: Double // New property for longitude
+    let latitude: Double 
+    let longitude: Double
     
     mutating func morepeople(by people: Int) {
         self.capacity += people

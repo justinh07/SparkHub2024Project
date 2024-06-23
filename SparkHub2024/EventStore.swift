@@ -6,10 +6,10 @@
 //
 import Foundation
 class EventStore {
-    static let shared = EventStore() // Singleton instance
+    static let shared = EventStore() 
     private var events: [Event] = []
     private init() {
-        loadEvents() // Load events from UserDefaults when initializing
+        loadEvents()
     }
     func addEvent(_ event: Event) {
         events.append(event)

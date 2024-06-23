@@ -159,8 +159,6 @@ struct CreateView: View {
     }
     
     private func createEvent() {
-        // Perform actual creation of event logic here
-        // For demonstration, this method is empty
     }
 }
 
