@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		551CD7252C2751DD00A50A51 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551CD7242C2751DD00A50A51 /* SearchView.swift */; };
 		551CD7272C276D7100A50A51 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551CD7262C276D7100A50A51 /* Event.swift */; };
+		551CD72B2C27942D00A50A51 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551CD72A2C27942D00A50A51 /* EventStore.swift */; };
 		5546D25F2C2515080060E95D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5546D25E2C2515080060E95D /* ProfileView.swift */; };
 		B28EE3932C223A2A00BB6D79 /* SparkHub2024App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EE3922C223A2A00BB6D79 /* SparkHub2024App.swift */; };
 		B28EE3952C223A2A00BB6D79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EE3942C223A2A00BB6D79 /* ContentView.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		551CD7242C2751DD00A50A51 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		551CD7262C276D7100A50A51 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		551CD72A2C27942D00A50A51 /* EventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
 		5546D25E2C2515080060E95D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		B28EE38F2C223A2A00BB6D79 /* SparkHub2024.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SparkHub2024.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28EE3922C223A2A00BB6D79 /* SparkHub2024App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkHub2024App.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				B28EE3F82C25012600BB6D79 /* JoinView.swift */,
 				5546D25E2C2515080060E95D /* ProfileView.swift */,
 				B28EE3FA2C26295E00BB6D79 /* LoginView.swift */,
+				551CD72A2C27942D00A50A51 /* EventStore.swift */,
 				B2E621A62C27425B00F27DD6 /* SignUpView.swift */,
 				B2E621AE2C27814700F27DD6 /* SignUpModel.swift */,
 				B2E621AC2C277E9000F27DD6 /* StartView.swift */,
@@ -318,6 +321,7 @@
 				551CD7272C276D7100A50A51 /* Event.swift in Sources */,
 				B28EE3F92C25012600BB6D79 /* JoinView.swift in Sources */,
 				5546D25F2C2515080060E95D /* ProfileView.swift in Sources */,
+				551CD72B2C27942D00A50A51 /* EventStore.swift in Sources */,
 				B28EE3FB2C26295E00BB6D79 /* LoginView.swift in Sources */,
 				B2E621A72C27425B00F27DD6 /* SignUpView.swift in Sources */,
 				B28EE3932C223A2A00BB6D79 /* SparkHub2024App.swift in Sources */,
