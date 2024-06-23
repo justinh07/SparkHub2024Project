@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @State private var karmaColor: Color = .green
+    @EnvironmentObject private var signUpModel: SignUpModel
 
     var body: some View {
         NavigationStack {
@@ -18,7 +19,7 @@ struct ProfileView: View {
                     .frame(width: 200, height: 200)
                     .padding()
                     .foregroundColor(.black)
-                Text("Christopher Hsu")
+                Text(signUpModel.loggedInUsername ?? "Unknown User")
                     .foregroundColor(.black)
                     .font(.system(size: 30))
                     .padding()
@@ -34,7 +35,7 @@ struct ProfileView: View {
                 Menu {
                     Button("Cancel") {}
                     NavigationLink("Confirm Log Out") {
-                        LoginView()
+                        StartView()
                             .navigationBarBackButtonHidden(true)
                     }
                 } label: {
@@ -50,4 +51,5 @@ struct ProfileView: View {
 
 #Preview {
     ProfileView()
+        .environmentObject(SignUpModel())
 }
