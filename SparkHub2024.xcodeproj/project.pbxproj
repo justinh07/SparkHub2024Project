@@ -25,6 +25,7 @@
 		B2E621A72C27425B00F27DD6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E621A62C27425B00F27DD6 /* SignUpView.swift */; };
 		B2E621AD2C277E9000F27DD6 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E621AC2C277E9000F27DD6 /* StartView.swift */; };
 		B2E621AF2C27814700F27DD6 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E621AE2C27814700F27DD6 /* SignUpModel.swift */; };
+		B2E621B12C27C81600F27DD6 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E621B02C27C81600F27DD6 /* DescriptionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		B2E621A62C27425B00F27DD6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		B2E621AC2C277E9000F27DD6 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		B2E621AE2C27814700F27DD6 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
+		B2E621B02C27C81600F27DD6 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				B28EE3942C223A2A00BB6D79 /* ContentView.swift */,
 				B28EE3BD2C24D37C00BB6D79 /* MapView.swift */,
 				B28EE3F62C24F0FB00BB6D79 /* CreateView.swift */,
+				B2E621B02C27C81600F27DD6 /* DescriptionView.swift */,
 				B28EE3F82C25012600BB6D79 /* JoinView.swift */,
 				5546D25E2C2515080060E95D /* ProfileView.swift */,
 				B28EE3FA2C26295E00BB6D79 /* LoginView.swift */,
@@ -307,6 +310,7 @@
 			files = (
 				B28EE3952C223A2A00BB6D79 /* ContentView.swift in Sources */,
 				B2E621AD2C277E9000F27DD6 /* StartView.swift in Sources */,
+				B2E621B12C27C81600F27DD6 /* DescriptionView.swift in Sources */,
 				551CD7252C2751DD00A50A51 /* SearchView.swift in Sources */,
 				B2E621AF2C27814700F27DD6 /* SignUpModel.swift in Sources */,
 				B28EE3BE2C24D37C00BB6D79 /* MapView.swift in Sources */,
