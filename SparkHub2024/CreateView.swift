@@ -1,10 +1,3 @@
-//
-//  CreateView.swift
-//  SparkHub2024
-//
-//  Created by Justin Huang on 6/20/24.
-//
-
 import SwiftUI
 
 struct CreateView: View {
@@ -14,20 +7,20 @@ struct CreateView: View {
     @State private var eventdate: Date = Date()
     @State private var capacity: String = ""
     
-    @State private var showingAlert = false
-    @State private var name = ""
+    @State private var isShowingAlert = false
+    @State private var isShowingSuccessAlert = false
+    
     @FocusState private var isTextFieldFocused: Bool
-
     
     var body: some View {
-
-        VStack{
+        
+        VStack {
             Text("Host Event")
                 .font(.system(size: 40))
             
             Spacer()
             
-            VStack{
+            VStack {
                 Text("Title")
                     .offset(x: -150)
                     .font(.system(size: 30))
@@ -40,12 +33,12 @@ struct CreateView: View {
                         RoundedRectangle(cornerRadius: 8)
                             .stroke(isTextFieldFocused ? Color.blue : Color.gray, lineWidth: 2)
                     )
-                .padding()
+                    .padding()
             }
             
             Spacer()
             
-            VStack{
+            VStack {
                 Text("Description")
                     .offset(x: -105)
                     .font(.system(size: 30))
@@ -63,21 +56,21 @@ struct CreateView: View {
             }
             Spacer()
             
-            VStack{
+            VStack {
                 Text("Event Date")
                     .offset(x: -105)
                     .font(.system(size: 30))
-
+                
                 DatePicker("Select a date", selection: $eventdate, displayedComponents: .date)
                     .datePickerStyle(CompactDatePickerStyle())
                     .labelsHidden()
                     .padding()
-                    .offset(x:-110)
+                    .offset(x: -110)
             }
             
             Spacer()
             
-            VStack{
+            VStack {
                 Text("Capacity")
                     .offset(x: -120)
                     .font(.system(size: 30))
@@ -106,40 +99,44 @@ struct CreateView: View {
             Spacer()
             
             Button("Create Event") {
-                if(title.isEmpty || description.isEmpty || eventdate == Date() || capacity.isEmpty){
-                    showingAlert.toggle()
-                }
-                else{
-                    let newid = UUID().uuidString
-                    let newEvent = Event(
-                        id: newid,
-                        title: title,
-                        description: description,
-                        eventdate: eventdate.timeIntervalSince1970,
-                        capacity: Int(capacity) ?? 0
-                    )
+                // Check if any of the required fields are empty
+                if title.isEmpty || description.isEmpty || eventdate == Date() || capacity.isEmpty {
+                    isShowingAlert = true // Show the alert
+                } else {
+                    // Simulate event creation success
+                    createEvent()
+                    isShowingSuccessAlert = true // Show the success alert
                 }
             }
-            
-            
-        }
-
-        .alert("Please fill all required fields", isPresented: $showingAlert) {
-            Button("OK", action: submit)
+            .alert(isPresented: $isShowingAlert) {
+                Alert(
+                    title: Text("Please fill all required fields"),
+                    dismissButton: .default(Text("OK")) {
+                        isShowingAlert = false // Dismiss the alert
+                    }
+                )
+            }
+            .alert(isPresented: $isShowingSuccessAlert) {
+                Alert(
+                    title: Text("Event Created"),
+                    message: Text("Your event has been successfully created."),
+                    dismissButton: .default(Text("OK")) {
+                        isShowingSuccessAlert = false // Dismiss the success alert
+                    }
+                )
+            }
+            .padding()
         }
     }
-
-    func submit() {
-    }
-        
-    private var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .none
-        return formatter
+    
+    private func createEvent() {
+        // Perform actual creation of event logic here
+        // For demonstration, this method is empty
     }
 }
 
-#Preview {
-    CreateView()
+struct CreateView_Previews: PreviewProvider {
+    static var previews: some View {
+        CreateView()
+    }
 }
