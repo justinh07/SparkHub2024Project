@@ -21,6 +21,9 @@ struct CreateView: View {
     @State private var isShowingAlert = false
     @State private var isShowingSuccessAlert = false
     
+    @State private var location: String = ""
+    @State private var coordinates: (lat: String, lon: String) = ("", "")
+    
     @FocusState private var isTextFieldFocused: Bool
     
     var body: some View {
@@ -103,7 +106,7 @@ struct CreateView: View {
                 Text("Capacity")
                     .offset(x: -120)
                     .font(.system(size: 30))
-                TextField("Enter 5-digit number", text: $capacity)
+                TextField("", text: $capacity)
                     .frame(width: 50)
                     .padding()
                     .background(Color.white)
@@ -154,9 +157,44 @@ struct CreateView: View {
         }
     }
     
-    private func createEvent() {
-        // Perform actual creation of event logic here
-        // For demonstration, this method is empty
+    func getCoordinates(for location: String) {
+        let urlEncodedLocation = location.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        let urlString = "https://nominatim.openstreetmap.org/search?q=\(urlEncodedLocation)&format=json&limit=1"
+        guard let url = URL(string: urlString) else {
+            coordinates = ("Invalid URL", "")
+            return
+        }
+
+        let request = URLRequest(url: url)
+
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                DispatchQueue.main.async {
+                    self.coordinates = ("Error fetching data", "")
+                }
+                return
+            }
+
+            do {
+                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]],
+                   let firstResult = json.first,
+                   let lat = firstResult["lat"] as? String,
+                   let lon = firstResult["lon"] as? String {
+                    DispatchQueue.main.async {
+                        self.coordinates = (lat, lon)
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.coordinates = ("No results found", "")
+                    }
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    self.coordinates = ("Error parsing data", "")
+                }
+            }
+        }
+        task.resume()
     }
 }
 
